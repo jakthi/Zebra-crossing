@@ -1,0 +1,144 @@
+html, body {
+    overflow: hidden;
+}
+
+#sign {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 300px;
+    transform: translate(50%, 50%);
+}
+
+.triangle,
+.triangle::before,
+.triangle::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    height: 30px;
+    width: 100%;
+    background: #cc0605;
+    border-radius: 30px;
+}
+
+.triangle::before {
+    transform-origin: 15px 15px;
+    transform: rotate(-60deg);
+    top: 0;
+}
+
+.triangle::after {
+    transform-origin: 285px 15px;
+    transform: rotate(60deg);
+    top: 0;
+}
+
+#zebra-crossing {
+    position: relative;
+    width: 160px;
+    height: 80px;
+    position: absolute;
+    top: 180px;
+    left: 70px;
+    transform: perspective(300px) rotatex(62deg);
+}
+
+.bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14%;
+    height: 100%;
+    background: #000000;
+}
+
+.bar:nth-child(2) {
+    left: 21.5%;
+}
+
+.bar:nth-child(3) {
+    left: 43%;
+}
+
+.bar:nth-child(4) {
+    left: 64.5%;
+}
+
+.bar:nth-child(5) {
+    left: 86%;
+}
+
+#legs::after,
+#legs::before,
+#arms::after,
+#arms::before {
+    content: "";
+    border: 2px solid white;
+    position: absolute;
+    background: black;
+    top: 52%;
+    left: 50%;
+    width: 12px;
+    height: 65px;
+    transform-origin: 5px 5px;
+    border-radius: 0 0 30px 100%;
+    transform: translate(-50%, 0) rotate(-30deg);
+    border-top: 0;
+}
+
+#arms::after,
+#legs::after {
+    transform: translate(-50%, 0) rotate(30deg)
+}
+
+#arms::before,
+#arms::after {
+    border: 0;
+    width: 10px;
+    height: 58px;
+    top:36%;
+}
+
+#body {
+    position: absolute;
+    top:38%;
+    left: 50%;
+    width: 16px;
+    height: 52px;
+    border-radius: 16px;
+    background: black;
+    transform: translate(-50%,0);
+}
+
+#head {
+    position: absolute;
+    top: 31%;
+    left:49%;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    border: 2px solid white;
+    background: black;
+    transform: translate(-50%,0)
+}
+
+#pole {
+    background: gray;
+    width: 36px;
+    height: 1000px;
+    position: absolute;
+    top: 280px;
+    left: 132px
+}
+
+#pole::before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+    height: 6px;
+    width: 100%;
+}
